@@ -1,11 +1,15 @@
 import express from "express";
 const app = express();
 import db from "./models/index.js";
+import contactRoutes from './routes/contact.route.js';
+
+app.use(express.json());
+app.use('/', contactRoutes);
 
 const startserver = async () =>{
     try{ 
         await db.mongoose.connect(db.url, {
-            dbName : ""        
+            dbName : "portfolio"        
         });
         console.log("Connection to the database successful");
         
