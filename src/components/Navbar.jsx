@@ -7,7 +7,7 @@ function Navbar() {
     const hideNavbar = location.pathname.includes('/dashboard');
     const [menuOpen, setMenuOpen] = useState(false);
     const links = [
-        { id: 1, label: "À propos", target: "/about" },
+        { id: 1, label: "About", target: "/about" },
         { id: 2, label: "Services", target: "/service" },
         { id: 3, label: "Work", target: "/work" },
         { id: 4, label: "Contact", target: "/contact" },
@@ -30,14 +30,14 @@ function Navbar() {
     );
 
     return (
-        <header className={`${hideNavbar ? 'hidden' : 'flex'} h-24 sm:h-16 sm:rounded-3xl sm:mr-4 sm:my-4 bg-[#3F264D] fixed top-0 left-0 w-full z-50`} style={{ fontFamily: 'Poetsen One, sans-serif' }}>
+        <header className={`${hideNavbar ? 'hidden' : 'flex'} h-24 sm:h-16 lg:rounded-3xl lg:ml-8 lg:my-4 bg-[#3F264D] fixed top-0 left-0 w-full lg:w-auto z-50`} style={{ fontFamily: 'Poetsen One, sans-serif' }}>
             <div className="container mx-auto pl-8 flex items-center justify-between relative z-10">
-                <Link to="/" className="flex flex-col items-center">
+                <Link to="/" className=" flex flex-col items-center">
                     <img src={logo} alt="Logo" className="h-16 w-auto" />
                 </Link>
                 <div className="flex items-center">
-                    <nav className="text-white tracking-widest text-sm lg:flex items-center hidden uppercase">
-                        <a href="/" className="py-2 mx-8 border-b-2 border-[#F6D969] hover:text-[#F6D969] ">
+                    <nav className="text-white tracking-widest text-sm lg:flex items-center hidden uppercase ">
+                        <a href="/" className="py-2 lg:ml-96 mr-8 border-b-2 border-[#F6D969] hover:text-[#F6D969] ">
                             Accueil
                         </a>
                         {links.map(({ id, label, target }) => (
@@ -64,7 +64,7 @@ function Navbar() {
                 </div>
 
                 {menuOpen && (
-                    <div className="absolute top-full left-0 w-full lg:hidden bg-[#3F264D]" id="navbar-default">
+                    <div className="absolute top-full left-0 w-full lg:hidden bg-[#2d123c]" id="navbar-default">
                         <ul className="font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-[#3F264D]">
                             <li>
                                 <Link to="/" onClick={handleHomeClick} className="font-bold block py-2 px-3 text-yellow-400 rounded hover:text-yellow-300">Accueil</Link>
