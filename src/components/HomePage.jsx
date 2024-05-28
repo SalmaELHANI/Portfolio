@@ -8,13 +8,11 @@ import Contact from './Contact'
 function HomePage() {
     return (
         <>
-            <div className='pt-24'>
-                <Hero />
+            <Hero />
                 <About />
                 <Services />
                 <Works />
                 <Contact />
-            </div>
         </>
     );
 }
