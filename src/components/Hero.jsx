@@ -73,7 +73,7 @@ function Hero() {
             Hi! I'm Salma EL HANI <br/>
             <span className='text-2xl'> Full Stack Developer & Social Media Designer</span>
           </h1>
-          <p className="mb-8 lg:pl-0 pl-2 pr-2 lg:mr-44 leading-relaxed">
+          <p className="mb-8 lg:pl-0 pl-2 pr-2 lg:mr-44 leading-relaxed text-white">
             Passionate about creating engaging web experiences. Experienced in both frontend and backend development, with a keen eye for social media design trends.
           </p>
           <div className="flex justify-center">
