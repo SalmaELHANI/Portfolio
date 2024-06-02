@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Contact() {
   return (
-    <div>Contact</div>
-  )
+    <div className="bg-[#2d123c] h-screen">
+        
+      </div>
+  );
 }
 
-export default Contact
+export default Contact;

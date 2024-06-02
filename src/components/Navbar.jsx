@@ -38,7 +38,7 @@ function Navbar() {
                 <div className="flex items-center">
                     <nav className="text-white tracking-widest text-sm lg:flex items-center hidden uppercase ">
                         <a href="/" className="py-2 lg:ml-96 mr-8 border-b-2 border-[#F6D969] hover:text-[#F6D969] ">
-                            Accueil
+                            Home
                         </a>
                         {links.map(({ id, label, target }) => (
                             <Link
