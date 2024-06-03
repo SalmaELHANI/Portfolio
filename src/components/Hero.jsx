@@ -8,7 +8,7 @@ const socialLinks = [
     className: "mr-1",
     svgWidth: 45,
     svgHeight: 45,
-    url: "https://wa.me/0659063386",
+    url: "https://wa.me/0623558553",
     svgLink: (
       <g>
         <path
@@ -23,7 +23,7 @@ const socialLinks = [
     className: "mr-1",
     svgWidth: 45,
     svgHeight: 45,
-    url: "https://www.instagram.com/cleanspace.ma?igsh=aDN5aWxpd3BoN2sy&utm_source=qr",
+    url: "https://www.instagram.com/salmaelhanii?igsh=dzZoNTl3aDBrb3I2",
     svgLink: (
       <g>
         <path
@@ -38,7 +38,7 @@ const socialLinks = [
     className: "mr-1",
     svgWidth: 25,
     svgHeight: 25,
-    url: "https://www.facebook.com/profile.php?id=61557423365831&mibextid=LQQJ4d",
+    url: "https://www.facebook.com/salma.hani.9480",
     svgLink: (
       <g>
         <path
@@ -77,7 +77,7 @@ function Hero() {
             Passionate about creating engaging web experiences. Experienced in both frontend and backend development, with a keen eye for social media design trends.
           </p>
           <div className="flex justify-center">
-            <Link to href="/contact" className="inline-flex bg-[#F6D969] border-0 py-2 px-9 focus:outline-none hover:text-[#F6D969] hover:bg-[#3F264D] hover:border-2 hover:border-[#F6D969] rounded text-lg">
+            <Link to="/contact" className="inline-flex bg-[#F6D969] py-2 px-9 focus:outline-none border-2 border-[#F6D969] hover:text-[#F6D969] hover:bg-[#3F264D] hover:border-2 hover:border-[#F6D969] rounded text-lg">
               Contact me
             </Link>
             <a href="#" className="ml-4 inline-flex bg-gray-100 border-0 py-2 px-9 focus:outline-none hover:bg-gray-200  rounded text-lg">
