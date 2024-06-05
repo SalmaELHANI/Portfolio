@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../images/Logo1.png'; 
 
 function Navbar() {
-    const location = useLocation();
-    const hideNavbar = location.pathname.includes('/dashboard');
     const [menuOpen, setMenuOpen] = useState(false);
     const links = [
         { id: 1, label: "About", target: "/about" },
@@ -30,7 +28,7 @@ function Navbar() {
     );
 
     return (
-        <header className={`${hideNavbar ? 'hidden' : 'flex'} h-24 sm:h-16 lg:rounded-3xl lg:ml-8 lg:my-4 bg-[#3F264D] fixed top-0 left-0 w-full lg:w-auto z-50`} style={{ fontFamily: 'Poetsen One, sans-serif' }}>
+        <header className={`flex h-24 sm:h-16 lg:rounded-3xl lg:ml-8 lg:my-4 bg-[#3F264D] fixed top-0 left-0 w-full lg:w-auto z-50`} style={{ fontFamily: 'Poetsen One, sans-serif' }}>
             <div className="container mx-auto pl-8 flex items-center justify-between relative z-10">
                 <Link to="/" className=" flex flex-col items-center">
                     <img src={logo} alt="Logo" className="h-16 w-auto" />

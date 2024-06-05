@@ -67,8 +67,8 @@ const socialLinks = [
 function Hero() {
   return (
     <section className=" body-font bg-gradient-to-r from-[#3F264D] to-[#68417c] mt-24 md:mt-0">
-      <div className="container mx-auto flex lg:px-24 md:py-10 lg:flex-row flex-col items-center" style={{ fontFamily: 'Poetsen One, sans-serif' }}>
-        <div className="lg:flex-grow mt-5 lg:mt-0 lg:w-2/3  lg:pr-16 flex flex-col lg:items-start lg:text-left mb-16 lg:mb-0 items-center text-center  pt-16">
+      <div className="container mx-auto flex lg:px-24 md:py-10 lg:flex-row flex-col items-center" style={{ fontFamily: 'Poetsen One, sans-serif' }} >
+        <div className="lg:flex-grow mt-5 lg:mt-0 lg:w-2/3  lg:pr-16 flex flex-col lg:items-start lg:text-left pb-16 lg:mb-0 items-center text-center  pt-16" data-aos="fade-down">
           <h1 className="lg:text-5xl mb-7 text-[#F6D969] tracking-tight text-4xl">
             Hi! I'm Salma EL HANI <br/>
             <span className='text-2xl'> Full Stack Developer & Social Media Designer</span>
@@ -87,14 +87,14 @@ function Hero() {
           <div className="flex mt-4">
             {socialLinks.map((link, index) => (
               <a key={index} href={link.url} className={link.className} aria-label={link.label}>
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={link.svgWidth} height={link.svgHeight} viewBox="0 0 48 48">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={link.svgWidth} height={link.svgHeight} viewBox="0 0 48 48" className='hover:h-20 hover:w-20'>
                   {link.svgLink}
                 </svg>
               </a>
             ))}
           </div>
         </div>
-        <div className="lg:max-w-lg lg:mt-16 mb-5 lg:w-1/3 lg:mb-16">
+        <div className="lg:max-w-lg lg:mt-16 mb-5 lg:w-1/3 lg:mb-16" data-aos="fade-left">
           <img className="object-cover object-center rounded" alt="hero" src={ImageHero} />
         </div>
       </div>

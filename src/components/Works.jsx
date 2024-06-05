@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CleanSpaceDesign from '../images/socialmedia-cleanspace.png';
 import ElhanishopDesign from '../images/socialmedia-elhanishop.png';
 import CleanSpaceWeb from '../images/webCleanSpace.png';
 import NoteManagementWeb from '../images/webNoteManagement.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Works() {
   const [selectedTab, setSelectedTab] = useState('development');
   const [startIndex, setStartIndex] = useState(0);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      once: true,
+      easing: 'ease-in-out',
+      offset: 100,
+    });
+  }, []);
 
   const projects = {
     development: [
@@ -14,29 +25,29 @@ function Works() {
         title: 'CleanSpace',
         description: 'CleanSpace is an online platform offering home cleaning services with high-quality service at the click of a button. It leverages the MERN Stack.',
         imgSrc: CleanSpaceWeb,
-        link: 'https://github.com/SalmaELHANI/CleanSpace.git'
+        link: 'https://github.com/SalmaELHANI/CleanSpace.git',
       },
       {
         title: 'Note Management',
         description: 'Note Management is an efficient online platform designed to help users organize and manage their notes seamlessly. Built with the MERN Stack, it ensures reliable performance and a user-friendly interface.',
         imgSrc: NoteManagementWeb,
-        link: 'https://github.com/SalmaELHANI/Note_Management.git'
-      }      
+        link: 'https://github.com/SalmaELHANI/Note_Management.git',
+      },
     ],
     design: [
       {
         title: 'CleanSpace Social Media Design',
         description: 'A captivating Instagram and Facebook page design for CleanSpace, created using Figma and Canva. This design aims to engage and attract followers with its clean and modern aesthetic.',
         imgSrc: CleanSpaceDesign,
-        link: 'https://www.figma.com/design/JjMP7sMWMftCe0v0ieSskA/CleanSpace?node-id=0-1&t=ZntFVMFr2E9Q4f8E-1'
+        link: 'https://www.figma.com/design/JjMP7sMWMftCe0v0ieSskA/CleanSpace?node-id=0-1&t=ZntFVMFr2E9Q4f8E-1',
       },
       {
         title: 'ELhani.shop Social Media Design',
         description: 'A visually stunning Instagram and Facebook page design for ELhani.shop, crafted using Figma and Canva. This design focuses on showcasing the brand’s unique offerings and creating a strong visual identity.',
         imgSrc: ElhanishopDesign,
-        link: 'https://www.figma.com/design/EqJRcwGuvNZtwRIy78W6XP/Untitled?node-id=0-1&t=INx69EBB5mVfOj9m-1'
-      }
-    ]    
+        link: 'https://www.figma.com/design/EqJRcwGuvNZtwRIy78W6XP/Untitled?node-id=0-1&t=INx69EBB5mVfOj9m-1',
+      },
+    ],
   };
 
   const allProjects = [...projects.development, ...projects.design];
@@ -83,7 +94,7 @@ function Works() {
         <div className="relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {visibleProjects.map((project, index) => (
-              <div key={index} className="rounded overflow-hidden shadow-lg flex flex-col bg-white">
+              <div key={index} className="rounded overflow-hidden shadow-lg flex flex-col bg-white" data-aos="zoom-in">
                 <div className="relative">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
                     <img className="w-full" src={project.imgSrc} alt={project.title} />
